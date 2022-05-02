@@ -17,4 +17,4 @@ $ npm start
 
 | Plugin | README |
 | ------ | ------ |
-| Questions | [https://github.com/npellegrini/react-autocomplete/questions.md][PlDb]
+| Questions | [https://github.com/npellegrini/react-autocomplete/blob/master/questions.md][PlDb] |
