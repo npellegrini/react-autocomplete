@@ -17,4 +17,6 @@ $ npm start
 
 | Plugin | README |
 | ------ | ------ |
-| Questions | [https://github.com/npellegrini/react-autocomplete/blob/master/questions.md][PlDb] |
+| Questions | [questions.md][PlDb] |
+
+[PlDb]: <https://github.com/joemccann/dillinger/tree/master/plugins/dropbox/README.md>
