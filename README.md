@@ -19,4 +19,4 @@ $ npm start
 | ------ | ------ |
 | Questions | [questions.md][PlDb] |
 
-[PlDb]: <https://github.com/joemccann/dillinger/tree/master/plugins/dropbox/README.md>
+[PlDb]: <https://github.com/npellegrini/react-autocomplete/blob/master/questions.md>
