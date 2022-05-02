@@ -1,38 +1,97 @@
-.App {
-  text-align: center;
+.container{
+  height: 100vh;
+}
+.app-header{
+  margin-bottom: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.search-bar-container {
+  width: 460px;
+  margin: 0 auto;
+  height: 52px;
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.line-height-1 {
+  line-height: 1;
+}
+.search-result {
+  position: absolute;
+  top: 52px;
+  width: 100%;
+  max-height: 350px;
+  overflow-y: auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.28);
+}
+.list-group-item {
+  cursor: pointer;
+}
+.list-group-item.active,
+.list-group-item:hover {
+  background-color: #e1e3e5;
+  border-color: #d3d5d7;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+.loading-container{
+  position: absolute;
+  top: 52px;
+  width: 100%;
+  max-height: 350px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  display: flex;
 }
 
-.App-link {
-  color: #61dafb;
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
 }
-
-@keyframes App-logo-spin {
-  from {
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #474545;
+  border-color: #474545 transparent #474545 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
   }
+}
+
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #766f79 #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #766f79;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
+
+/* Highlight */
+.highlight {
+  background-color: #EEF43B;
 }
