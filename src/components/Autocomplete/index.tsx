@@ -16,12 +16,21 @@ const Autocomplete = ({  onSelect, getSources }: AutocompleteComponent) => {
     const WAIT_INTERVAL = 1000;  
 
     useEffect(() => {
+        
+        const handleClickOutside = (event: any) => {
+            if (
+                searchContainer.current &&
+                !searchContainer.current.contains(event.target)
+            ) {
+                hideSuggestion();
+            }
+        };
         window.addEventListener("mousedown", handleClickOutside);
 
         return () => {
             window.removeEventListener("mousedown", handleClickOutside);
         };
-    }, []);
+    }, [searchContainer]);
 
     const onChange =  (e: React.ChangeEvent<HTMLInputElement>) => {
         
@@ -51,15 +60,7 @@ const Autocomplete = ({  onSelect, getSources }: AutocompleteComponent) => {
         setLoading(false)
         showSuggestion()
 }
-    const handleClickOutside = (event: any) => {
-        if (
-            searchContainer.current &&
-            !searchContainer.current.contains(event.target)
 
-        ) {
-            hideSuggestion();
-        }
-    };
     const showSuggestion = () => setIsVisible(true);
 
     const hideSuggestion = () => setIsVisible(false);
